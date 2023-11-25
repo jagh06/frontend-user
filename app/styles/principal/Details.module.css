@@ -1,0 +1,55 @@
+.principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.detaildata {
+    margin-top: 2rem;
+    background-color: rgb(94, 93, 93, 0.3);
+    width: 80%;
+    border-radius: 10px;
+    
+}
+.imagelist {
+    display: flex;
+    padding: 2.3rem;
+}
+.imagelist {
+    height: 30rem; /* ajusta la altura máxima según tus necesidades */
+    overflow-y: auto;
+}
+.imagen {
+    border-radius: 10px;
+    margin-right: 2rem;
+}
+.moredetails {
+    padding: 1rem;
+    margin-top: 1rem;
+}
+.moredetails p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.moredetails h2 {
+    color: blue;
+    margin-bottom: 1rem;
+}
+.divlink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.linkto {
+    padding: 1rem;
+}
+.reservar {
+    width: 100%;
+    border-radius: 10px;
+    background-color: blue;
+    padding: 1rem 4rem 1rem 4rem;
+}
+.reservar:hover {
+    cursor: pointer;
+    background-color: rgb(83, 83, 238);
+}

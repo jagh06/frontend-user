@@ -1,0 +1,127 @@
+.banner {
+    background-color: rgb(41, 32, 32);
+    background-size: cover;
+    height: 30rem;
+}
+
+.primero {
+    display: flex;
+    align-items: center;
+    height: 30rem;
+}
+
+.bannerquestion {
+    padding: 0 auto;
+    place-content: center;
+    display: block;
+    width: 100%;
+}
+
+ .divquestion h3 {
+    font-size: 45px;
+    color: rgb(224, 222, 222);
+}
+
+ .divbutton h4 {
+    padding-right: 29px;
+    font-size: 20px;
+    color: rgb(224, 222, 222);
+}
+
+.divquestion {
+    padding: 10px 20px 10px 20px;
+}
+
+.divbutton {
+    height: 5rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 10px 20px;
+}
+
+.divbutton h4 {
+    width: 60%;
+    margin-right: 7rem;
+}
+
+.bannerbutton {
+    color: white;
+    background-color: black;
+    width: auto;
+    height: auto;
+    border-radius: 1rem;
+    font-size: 30px;
+    border: none;
+    padding: 15px 20px 15px 20px;
+}
+
+.bannerbutton:hover {
+    cursor: pointer;
+    border: none;
+    transform: scale(1.01);
+    background-color: rgb(36, 97, 226);
+    transition: all .2s ease-in-out;
+}
+
+.linkstyle {
+    text-decoration: none;
+    color: white;
+}
+
+/* HOTEL */
+.h1{
+    margin-left: 3rem;
+    padding: 2rem;
+}
+.hotel {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    background-color: rgb(247, 242, 242);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    border: 1px solid gray;
+    color: rgb(19, 18, 18);
+    border-radius: 10px;
+}
+.images {
+    background-color: blue;
+    
+}
+.detalles {
+padding: 1rem;
+width: 50%;
+text-align: justify;
+}
+.detalles p{
+    padding: 10px;
+}
+.detalles h3{
+    color: blue; 
+}
+.img {
+    border-radius: 8px;
+}
+.selectbutton {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.selectbutton a {
+    border: none;
+    background-color: blue;
+    border-radius: 10px;
+    width: 10rem;
+    height: 4rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.selectbutton a:hover {
+    cursor: pointer;
+    background-color: rgb(96, 96, 241);
+}
+
