@@ -17,6 +17,15 @@
     flex-direction: column;
     align-items: center;
 }
+.iniciarsesion {
+    width: 75%;
+}
+.linkiniciarsesion{
+    float: right;
+}
+.linkiniciarsesion a:hover{
+    color: blue;
+}
 
 @media (min-width:769px) {
     .barra {

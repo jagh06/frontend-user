@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link"
 import Image from "next/image"
 import styles from "../styles/principal/Header.module.css";
@@ -17,10 +18,18 @@ const Header = () => {
               
             </nav>
           </div>
+          
 
-         
+          <div className={styles.iniciarsesion}>
+            <div className={styles.linkiniciarsesion}>
+            <Link href="../logininfo" >Cuenta</Link>
+
+            </div>
+          </div>
         </div>
+       
       </div>
+      
     </header>
 
   )

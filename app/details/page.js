@@ -62,7 +62,7 @@ const Page = () => {
               <div className={styles.divlink}>
                 <div className={styles.linkto}>
                   <Link
-                    href={{ pathname: `../reservar`, query: { id: hotelData._id } }}
+                    href={{ pathname: `../login`, query: { id: hotelData._id } }}
                     className={styles.reservar}
                   >
                     Reservar
