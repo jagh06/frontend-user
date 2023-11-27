@@ -1,0 +1,43 @@
+.divinicial {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.divnosotros {
+    width: 50%;
+    text-align: justify;
+}
+.aplicacion{
+    padding: 1rem;
+    border-radius: 7px;
+    background-color: rgb(45, 46, 45, 0.8);
+    margin-bottom: 2rem;
+}
+.empresa {
+    padding: 1rem;
+    border-radius: 7px;
+    background-color: rgba(45, 46, 45, 0.8);
+}
+.divaplicacion {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+.divaplicacion h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.divempresa {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+.desarrolladores {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.image {
+    margin: 10px;
+}
+.iamgedev {
+    border-radius: 10px;
+} 

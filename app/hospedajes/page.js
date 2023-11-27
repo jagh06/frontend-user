@@ -22,9 +22,8 @@ const Hospedajes = () => {
   }, []);
 
   const handleDatas = (data) => {
-    console.log(data)
-  }
-
+    console.log(data);
+  };
 
   return (
     <div>
@@ -70,7 +69,7 @@ const Hospedajes = () => {
                         width={200}
                         height={200}
                         alt="Hotel"
-                        priority 
+                        priority
                       />
                     </div>
                     <div className={styles.detalles}>
@@ -80,7 +79,14 @@ const Hospedajes = () => {
                       <p>Precio/noche MXN ${index.price}</p>
                     </div>
                     <div className={styles.selectbutton}>
-                      <Link href={{pathname: `../details`, query: { id: index._id} }}>Ver Hotel</Link>
+                      <Link
+                        href={{
+                          pathname: `../details`,
+                          query: { id: index._id },
+                        }}
+                      >
+                        Ver Hotel
+                      </Link>
                     </div>
                   </div>
                 ))}

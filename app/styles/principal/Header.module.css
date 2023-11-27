@@ -18,7 +18,10 @@
     align-items: center;
 }
 .iniciarsesion {
+    display: flex;
     width: 75%;
+    justify-content: center;
+    align-items: center;
 }
 .linkiniciarsesion{
     float: right;
@@ -59,4 +62,23 @@
 
 .navegacion a:hover {
     color: rgb(73, 132, 241);
+}
+.divdivbuscador {
+    width: 80%;
+    display: flex;
+    margin-right: 6rem;
+    justify-content: flex-end;
+    margin-left: 1rem;
+}
+.divbuscador input{
+    width: 16rem;
+    height: 2rem;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+.divbuscador input::-webkit-inner-spin-button,
+.divbuscador input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

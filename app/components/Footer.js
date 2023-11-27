@@ -12,7 +12,7 @@ const Footer = () => {
             <Link href="../nosotros">Nosotros</Link>
           </nav>
 
-          <p className={styles.copyright}>Todos los derechos reservados</p>
+          <p className={styles.copyright}>Todos los derechos reservados @solvingneeds</p>
         </div>
       </main>
     </footer>
