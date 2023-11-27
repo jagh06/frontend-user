@@ -10,6 +10,7 @@ const LoginInfo = () => {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorLogin, setErrorLogin] = useState("");
 
   const handleSumbit = async (e) => {
     e.preventDefault();
@@ -35,6 +36,7 @@ const LoginInfo = () => {
       );
       return response.data;
     } catch (error) {
+      setErrorLogin("Las credenciales no coinciden");
       console.log("No se pudo authenticar:", error);
     }
   };
@@ -71,6 +73,9 @@ const LoginInfo = () => {
               <div className={styles.linkregistro}>
                 <p>¿No estas registrado? </p>
                 <Link href="../registro"> Registrate</Link>
+              </div>
+              <div className={styles.errorlogin}>
+                {errorLogin && (<p>{errorLogin}</p>)}
               </div>
 
               <div className={styles.divbutton}>

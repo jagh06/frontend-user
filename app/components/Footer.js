@@ -9,7 +9,7 @@ const Footer = () => {
         <div className={styles.contenido}>
           <nav className={styles.navegacion}>
             <Link href="/">Inicio</Link>
-            <Link href="/">Nosotros</Link>
+            <Link href="../nosotros">Nosotros</Link>
           </nav>
 
           <p className={styles.copyright}>Todos los derechos reservados</p>

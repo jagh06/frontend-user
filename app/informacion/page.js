@@ -3,8 +3,10 @@ import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import axios from "axios";
 import styles from "../styles/principal/Informacion.module.css";
+import { useRouter } from "next/navigation";
 
 const Informacion = () => {
+  const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [reservationDetails, setReservationDetails] = useState("");
@@ -41,7 +43,19 @@ const Informacion = () => {
       console.log("ERROR_GET_ITEM");
     }
   }, []);
-  console.log(reservationDetails);
+
+  const handleDelete = async (id) => {
+    try {
+      const response = await axios.delete(
+        `http://localhost:3001/api/reservaciones/delete/${id}`
+      );
+      if (response.status === 200) {
+        router.push("")
+      }
+    } catch (error) {
+      console.log("ERROR_DELETE_RESERVATION")
+    }
+  };
 
   return (
     <Layout>
@@ -86,7 +100,10 @@ const Informacion = () => {
                       </p>
                     </div>
                     <div className={styles.divbutton}>
-                      <button className={styles.button}>
+                      <button
+                        className={styles.button}
+                        onClick={() => handleDelete(index._id)}
+                      >
                         Eliminar de la lista de reservas
                       </button>
                     </div>

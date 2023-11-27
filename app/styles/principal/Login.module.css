@@ -45,3 +45,7 @@
 .linkregistro a {
     color: rgb(106, 106, 235);
 }
+.errorlogin p{
+    font-size: 15px;
+    color: red;
+}

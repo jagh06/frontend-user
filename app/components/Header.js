@@ -10,12 +10,11 @@ const Header = () => {
       <div >
         <div className={styles.barraandiconuser}>
           <div className={styles.barra}>
-            <Link href="/">
-              <Image width={120} height={60} src="/favicon.ico" alt="Image logo" />
+            <Link href="/" className={styles.iconapp}>
+              <Image width={250} height={40} src="/images/logologo.png" alt="Image logo" />
             </Link>
             <nav className={styles.navegacion}>
               <Link href="/">Home</Link>
-              
             </nav>
           </div>
           

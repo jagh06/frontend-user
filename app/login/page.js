@@ -11,6 +11,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [idhotel, setIdGet] = useState("");
+  const [errorLogin, setErrorLogin] = useState("");
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -23,10 +24,13 @@ const Login = () => {
     try {
       const userExists = await authenticateUser(email, password);
       console.log("datos deuser", userExists.data.user._id);
-      localStorage.setItem("iTemp_User", JSON.stringify(userExists.data.user._id));
+      localStorage.setItem(
+        "iTemp_User",
+        JSON.stringify(userExists.data.user._id)
+      );
       localStorage.setItem("iTemp_Hotel", JSON.stringify(idhotel));
       if (userExists) {
-        router.push("../reservar")
+        router.push("../reservar");
       }
     } catch (error) {
       console.log("ERROR_GET_ITEM");
@@ -40,6 +44,7 @@ const Login = () => {
       );
       return response.data;
     } catch (error) {
+      setErrorLogin("Las credenciales no coinciden.");
       console.log("No se pudo authenticar:", error);
     }
   };
@@ -77,7 +82,9 @@ const Login = () => {
                 <p>¿No estas registrado? </p>
                 <Link href="../registro"> Registrate</Link>
               </div>
-
+              <div className={styles.errorlogin}>
+                {errorLogin && <p>{errorLogin}</p>}
+              </div>
               <div className={styles.divbutton}>
                 <button>Iniciar sesion</button>
               </div>

@@ -3,7 +3,7 @@
     background-size: cover;
     background-position: 50%;
     background-color: rgb(12, 12, 12);
-    padding: 5px;
+    padding: 1rem;
 }
 
 .barraandiconuser {
@@ -36,7 +36,7 @@
 
 .navegacion {
     margin-top: 5rem;
-    margin-left: 5rem;
+    margin-left: 1rem;
     display: flex;
     gap: 2rem;
 }
