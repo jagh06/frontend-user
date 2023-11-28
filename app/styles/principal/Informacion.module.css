@@ -61,3 +61,16 @@
     cursor: pointer;
     background-color: rgb(71, 71, 230);
 }
+.buttonlogout {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: none;
+    background-color: rgb(48, 48, 230);
+}
+
+.buttonlogout:hover {
+    background-color: rgb(89, 89, 216);
+    cursor: pointer;
+}

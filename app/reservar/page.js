@@ -63,7 +63,7 @@ const Reservar = () => {
   const handleFormSubmit = async (e) => {
     console.log(idho, idus);
     e.preventDefault();
-    onSubmit({ nombre, correo, phone, personas, fecha });
+    onSubmit({ nombre, correo, phone, personas, fecha, nonoches});
   };
 
   const onSubmit = async (e) => {
@@ -101,7 +101,7 @@ const Reservar = () => {
           phone: data.phone,
           numpersonas: data.personas,
           fechallegada: data.fecha,
-          numnoches: data.nonoches
+          numdenoches: data.nonoches
         }
       );
       if (response.status === 200) {

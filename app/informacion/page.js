@@ -50,11 +50,17 @@ const Informacion = () => {
         `http://localhost:3001/api/reservaciones/delete/${id}`
       );
       if (response.status === 200) {
-        router.push("")
+        router.push("");
       }
     } catch (error) {
-      console.log("ERROR_DELETE_RESERVATION")
+      console.log("ERROR_DELETE_RESERVATION");
     }
+  };
+
+  const deleteCache = () => {
+    localStorage.removeItem("loged_user_authentication"); // Limpiar localStorage
+    sessionStorage.clear(); // Limpiar sessionStorage (si es necesario)
+    router.push("/");
   };
 
   return (
@@ -71,6 +77,9 @@ const Informacion = () => {
                 <p>
                   Correo electronico registrado: <span>{email}</span>
                 </p>
+                <button className={styles.buttonlogout} onClick={deleteCache}>
+                  Salir
+                </button>
               </div>
             </div>
           </div>
@@ -84,8 +93,10 @@ const Informacion = () => {
                     <div className={styles.divinformacion}>
                       <p>
                         Reservado para <span>{index.namehotel}</span> para{" "}
-                        <span>{index.numpersonas}</span> personas.
+                        <span>{index.numpersonas}</span> personas por{" "}
+                        <span>{index.numdenoches}</span> noches.
                       </p>
+
                       <p>
                         Contacto: <span>{index.emailowner}</span>
                       </p>

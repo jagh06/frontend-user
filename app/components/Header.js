@@ -2,8 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/principal/Header.module.css";
-import { useState } from "react";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   const router = useRouter();
@@ -16,6 +16,7 @@ const Header = () => {
     router.push(`/searchresult?query=${searchQuery}`);
     //window.location = `/searchresult?query=${searchQuery}`;
   };
+ 
 
   return (
     <header className={styles.header}>
@@ -49,8 +50,11 @@ const Header = () => {
                 </form>
               </div>
             </div>
+
             <div className={styles.linkiniciarsesion}>
-              <Link href="../logininfo">Cuenta</Link>
+              <div>
+                <Link href="../veriry">Cuenta</Link>
+              </div>
             </div>
           </div>
         </div>

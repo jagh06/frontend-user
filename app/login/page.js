@@ -30,6 +30,7 @@ const Login = () => {
       );
       localStorage.setItem("iTemp_Hotel", JSON.stringify(idhotel));
       if (userExists) {
+       localStorage.setItem("loged_user_authentication", JSON.stringify(userExists.data))
         router.push("../reservar");
       }
     } catch (error) {

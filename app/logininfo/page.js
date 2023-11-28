@@ -22,6 +22,7 @@ const LoginInfo = () => {
         JSON.stringify(userExists.data.user._id)
       );
       if (userExists) {
+        localStorage.setItem("loged_user_authentication", JSON.stringify(userExists.data))
         router.push("../informacion");
       }
     } catch (error) {
@@ -70,6 +71,7 @@ const LoginInfo = () => {
                   required
                 />
               </label>
+              <Link className={styles.newpassword} href="../searchemail">¿Olvidaste tu contraseña?</Link>
               <div className={styles.linkregistro}>
                 <p>¿No estas registrado? </p>
                 <Link href="../registro"> Registrate</Link>

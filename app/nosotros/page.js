@@ -107,7 +107,7 @@ const Nosotros = () => {
                       className={styles.iamgedev}
                       width={250}
                       height={300}
-                      src="/images/nelson.jpeg"
+                      src="/images/victor.png"
                       alt="Image Victo"
                     />
                     <p>Víctor Manuel Goznález López. Desarrollador FrontEnd</p>

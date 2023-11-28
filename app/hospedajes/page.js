@@ -32,7 +32,7 @@ const Hospedajes = () => {
           <div className={styles.primero}>
             <div className={styles.bannerquestion}>
               <div className={styles.divquestion}>
-                <h3>¿Quiere ser cliente de TS?</h3>
+                <h3>¿Quiere ser cliente de Turingo Space?</h3>
               </div>
               <div className={styles.divbutton}>
                 <h4>
@@ -41,7 +41,7 @@ const Hospedajes = () => {
                 <button className={styles.bannerbutton}>
                   <Link
                     className={styles.linkstyle}
-                    href={"http://localhost:3000"}
+                    href={"http://localhost:3002"}
                   >
                     Registra tu hospedaje
                   </Link>
