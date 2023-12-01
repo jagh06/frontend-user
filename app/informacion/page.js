@@ -50,7 +50,7 @@ const Informacion = () => {
         `http://localhost:3001/api/reservaciones/delete/${id}`
       );
       if (response.status === 200) {
-        router.push("");
+        router.push("./informacion");
       }
     } catch (error) {
       console.log("ERROR_DELETE_RESERVATION");

@@ -30,12 +30,6 @@
     color: blue;
 }
 
-@media (min-width:769px) {
-    .barra {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
 
 .navegacion {
     margin-top: 5rem;
@@ -82,3 +76,21 @@
   -webkit-appearance: none;
   margin: 0;
 }
+
+@media (max-width:769px) {
+    .barraandiconuser {
+        display: block;
+    }
+    .iniciarsesion {
+        justify-content: center;
+        align-items: center;
+    }
+    .inputbuscador {
+        width: 2rem;
+    }
+    .divbuscador {
+        width: 11rem;
+    }
+}
+
+

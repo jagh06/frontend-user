@@ -125,3 +125,21 @@ text-align: justify;
     background-color: rgb(96, 96, 241);
 }
 
+@media (max-width:769px) {
+    .divbutton {
+        margin-top: 2rem;
+    }
+    .divbutton h4 {
+        font-size: 14px;
+    }
+    .bannerbutton {
+        font-size: 14px;
+    }
+    .hotel {
+        display: block;
+    }
+    .selectbutton {
+        width: 100%;
+    }
+}
+

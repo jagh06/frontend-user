@@ -39,6 +39,7 @@
     display: flex;
 }
 .divinformacion {
+    text-align: justify;
     width: 70%;
 }
 .divbutton {
@@ -73,4 +74,18 @@
 .buttonlogout:hover {
     background-color: rgb(89, 89, 216);
     cursor: pointer;
+}
+
+@media (max-width:769px) {
+   .divinforeservation {
+    display: block;
+   }
+   .divbutton {
+    margin-top: 1rem;
+    width: 100%;
+   }
+   .divinformacion {
+    font-size: 11px;
+
+}
 }

@@ -30,7 +30,10 @@ const Login = () => {
       );
       localStorage.setItem("iTemp_Hotel", JSON.stringify(idhotel));
       if (userExists) {
-       localStorage.setItem("loged_user_authentication", JSON.stringify(userExists.data))
+        localStorage.setItem(
+          "loged_user_authentication",
+          JSON.stringify(userExists.data)
+        );
         router.push("../reservar");
       }
     } catch (error) {
@@ -79,6 +82,9 @@ const Login = () => {
                   required
                 />
               </label>
+              <Link className={styles.newpassword} href="../searchemail">
+                ¿Olvidaste tu contraseña?
+              </Link>
               <div className={styles.linkregistro}>
                 <p>¿No estas registrado? </p>
                 <Link href="../registro"> Registrate</Link>

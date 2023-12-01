@@ -14,7 +14,6 @@ const Header = () => {
     e.preventDefault();
 
     router.push(`/searchresult?query=${searchQuery}`);
-    //window.location = `/searchresult?query=${searchQuery}`;
   };
  
 
