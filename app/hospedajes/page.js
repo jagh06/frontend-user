@@ -78,16 +78,22 @@ const Hospedajes = () => {
                       <p>Tel. {index.phone}</p>
                       <p>Precio/noche MXN ${index.price}</p>
                     </div>
-                    <div className={styles.selectbutton}>
-                      <Link
-                        href={{
-                          pathname: `../details`,
-                          query: { id: index._id },
-                        }}
-                      >
-                        Ver Hotel
-                      </Link>
-                    </div>
+                    {index.disponible === true ? (
+                      <div className={styles.selectbutton}>
+                        <Link
+                          href={{
+                            pathname: `../details`,
+                            query: { id: index._id },
+                          }}
+                        >
+                          Ver Hotel
+                        </Link>
+                      </div>
+                    ) : (
+                      <div className={styles.selectbutton}>
+                        <h4>No hay cuartos disponibles</h4>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
