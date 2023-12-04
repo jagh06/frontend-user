@@ -6,6 +6,7 @@ import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/principal/Details.module.css";
+import { baseURL } from "@/baseURL";
 
 const Page = () => {
   const router = useRouter();
@@ -18,7 +19,7 @@ const Page = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/api/hotels/getforuser/${idGet}`
+          `${baseURL}api/hotels/getforuser/${idGet}`
         );
         setHotelData(response.data.data);
         setImagenes[response.data.data.images];

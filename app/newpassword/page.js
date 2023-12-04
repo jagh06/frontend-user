@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import { baseURL } from "@/baseURL";
 
 const NewPassword = () => {
   const router = useRouter();
@@ -22,7 +23,7 @@ const NewPassword = () => {
 
   const onSubit = async (data) => {
     const response = await axios.put(
-      `http://localhost:3001/api/users/newpassword/${idu}`,
+      `${baseURL}api/users/newpassword/${idu}`,
       {
         password: data,
       }

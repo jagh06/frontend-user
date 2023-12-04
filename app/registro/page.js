@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import styles from "../styles/principal/Registro.module.css";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import { baseURL } from "@/baseURL";
 
 const Registro = () => {
   const router = useRouter();
@@ -34,7 +35,7 @@ const Registro = () => {
   const submitDataToBackend = async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/users/newuser/",
+        `${baseURL}api/users/newuser/`,
         {
           name: data.name,
           email: data.email,

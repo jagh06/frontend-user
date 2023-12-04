@@ -5,6 +5,7 @@ import styles from "../styles/principal/Index.module.css";
 import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import { baseURL, baseURLClient } from "@/baseURL";
 
 const Hospedajes = () => {
   const router = useRouter();
@@ -12,7 +13,7 @@ const Hospedajes = () => {
   useEffect(() => {
     try {
       const fetchDatas = async () => {
-        const respuesta = await axios.get("http://localhost:3001/api/hotels");
+        const respuesta = await axios.get(`${baseURL}api/hotels`);
         setDatas(respuesta.data.data);
       };
       fetchDatas();
@@ -41,7 +42,7 @@ const Hospedajes = () => {
                 <button className={styles.bannerbutton}>
                   <Link
                     className={styles.linkstyle}
-                    href={"http://localhost:3002"}
+                    href={`${baseURLClient}`}
                   >
                     Registra tu hospedaje
                   </Link>

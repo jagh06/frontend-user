@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import { baseURL } from "@/baseURL";
 
 const Login = () => {
   const router = useRouter();
@@ -43,7 +44,7 @@ const Login = () => {
   const authenticateUser = async (email, password) => {
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/users/login",
+        `${baseURL}api/users/login`,
         { email: email, password: password }
       );
       return response.data;

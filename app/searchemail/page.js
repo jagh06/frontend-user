@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import styles from "../styles/principal/SearchAndnew.module.css";
+import { baseURL } from "@/baseURL";
 
 const SearchEmail = () => {
   const router = useRouter();
@@ -18,7 +19,7 @@ const SearchEmail = () => {
   const fetchData = async (data) => {
     try {
         const response = await axios.get(
-            `http://localhost:3001/api/users/email/${data}`
+            `${baseURL}api/users/email/${data}`
           );
           if (response.data.data[0] != null) {
             router.push(`../newpassword?temporary=${response.data.data[0]._id}`);

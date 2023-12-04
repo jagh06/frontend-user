@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import axios from "axios";
 import styles from "../styles/principal/Informacion.module.css";
 import { useRouter } from "next/navigation";
+import { baseURL } from "@/baseURL";
 
 const Informacion = () => {
   const router = useRouter();
@@ -20,7 +21,7 @@ const Informacion = () => {
     try {
       const fetchDataUser = async () => {
         const response = await axios.get(
-          `http://localhost:3001/api/users/${idu}`
+          `${baseURL}api/users/${idu}`
         );
         setName(response.data.data.name);
         setEmail(response.data.data.email);
@@ -33,7 +34,7 @@ const Informacion = () => {
     try {
       const fetchData = async () => {
         const response = await axios.get(
-          `http://localhost:3001/api/reservaciones/iduser/${idu}`
+          `${baseURL}api/reservaciones/iduser/${idu}`
         );
         setReservationDetails(response.data);
         //console.log(response.data);
@@ -47,7 +48,7 @@ const Informacion = () => {
   const handleDelete = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:3001/api/reservaciones/delete/${id}`
+        `${baseURL}api/reservaciones/delete/${id}`
       );
       if (response.status === 200) {
         router.push("./informacion");

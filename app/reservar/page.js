@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import styles from "../styles/principal/Reservar.module.css";
 import axios from "axios";
+import { baseURL } from "@/baseURL";
 
 const Reservar = () => {
   const router = useRouter();
@@ -35,7 +36,7 @@ const Reservar = () => {
 
     try {
       const fetchDataUser = async () => {
-        const response = await axios.get(`http://localhost:3001/api/users/${idu}`);
+        const response = await axios.get(`${baseURL}api/users/${idu}`);
         setNombre(response.data.data.name);
         setCorreo(response.data.data.email)
       }
@@ -47,7 +48,7 @@ const Reservar = () => {
     try {
       const fetchData = async () => {
         const responsehotel = await axios.get(
-          `http://localhost:3001/api/hotels/getforuser/${idh}`
+          `${baseURL}api/hotels/getforuser/${idh}`
         );
         setEmailOwner(responsehotel.data.data.emailowner);
         setNameHotel(responsehotel.data.data.namehotel);
@@ -88,7 +89,7 @@ const Reservar = () => {
   const submitDataToBackend = async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:3001/api/reservaciones/",
+        `${baseURL}api/reservaciones/`,
         {
           emailowner: data.emailowner,
           namehotel: data.namehotel,

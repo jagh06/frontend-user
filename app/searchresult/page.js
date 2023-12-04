@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/principal/Index.module.css";
+import { baseURL } from "@/baseURL";
 
 const Page = () => {
   const router = useRouter();
@@ -20,7 +21,7 @@ const Page = () => {
   const fetchDatas = async (query) => {
     try {
       const response = await axios.get(
-        `http://localhost:3001/api/hotels/searchquery/${query}`
+        `${baseURL}api/hotels/searchquery/${query}`
       );
       setDatas(response.data.data);
     } catch (error) {
