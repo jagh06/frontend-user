@@ -43,10 +43,10 @@ const Login = () => {
   };
   const authenticateUser = async (email, password) => {
     try {
-      const response = await axios.post(
-        `${baseURL}api/users/login`,
-        { email: email, password: password }
-      );
+      const response = await axios.post(`${baseURL}api/users/login`, {
+        email: email,
+        password: password,
+      });
       return response.data;
     } catch (error) {
       setErrorLogin("Las credenciales no coinciden.");
@@ -59,11 +59,12 @@ const Login = () => {
       <main className="contenedor">
         <div className={styles.divprincipal}>
           <div className={styles.divform}>
-            <h2>Inicia sesion</h2>
-            <form onSubmit={handleSumbit}>
+            <h2 className={styles.title}>Inicia sesion</h2>
+            <form className={styles.form} onSubmit={handleSumbit}>
               <label>
-                <p>Correo electronico</p>
+                <p className={styles.subtitle}>Correo electronico</p>
                 <input
+                  className={styles.inputStyle}
                   type="email"
                   id="email"
                   value={email}
@@ -73,8 +74,9 @@ const Login = () => {
                 />
               </label>
               <label>
-                <p>Contraseña</p>
+                <p className={styles.subtitle}>Contraseña</p>
                 <input
+                  className={styles.inputStyle}
                   type="password"
                   id="password"
                   value={password}
@@ -83,18 +85,22 @@ const Login = () => {
                   required
                 />
               </label>
+              <br /> <br />
               <Link className={styles.newpassword} href="../searchemail">
                 ¿Olvidaste tu contraseña?
               </Link>
+              <br /> <br />
               <div className={styles.linkregistro}>
-                <p>¿No estas registrado? </p>
-                <Link href="../registro"> Registrate</Link>
+                <Link href="../registro">
+                  <span style={{fontSize:13}}>¿No estas registrado? </span> <br />
+                  Registrate
+                </Link>
               </div>
               <div className={styles.errorlogin}>
                 {errorLogin && <p>{errorLogin}</p>}
               </div>
               <div className={styles.divbutton}>
-                <button>Iniciar sesion</button>
+                <button>Iniciar sesión</button>
               </div>
             </form>
           </div>
