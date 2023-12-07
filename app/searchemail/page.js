@@ -18,18 +18,15 @@ const SearchEmail = () => {
 
   const fetchData = async (data) => {
     try {
-        const response = await axios.get(
-            `${baseURL}api/users/email/${data}`
-          );
-          if (response.data.data[0] != null) {
-            router.push(`../newpassword?temporary=${response.data.data[0]._id}`);
-          } else {
-            setExists("Esta cuenta no existe");
-          }
+      const response = await axios.get(`${baseURL}api/users/email/${data}`);
+      if (response.data.data[0] != null) {
+        router.push(`../newpassword?temporary=${response.data.data[0]._id}`);
+      } else {
+        setExists("Esta cuenta no existe");
+      }
     } catch (error) {
-        console.log("ERROR_GET_ACCOUNT")
+      console.log("ERROR_GET_ACCOUNT");
     }
-    
   };
 
   return (

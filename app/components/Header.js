@@ -15,51 +15,91 @@ const Header = () => {
 
     router.push(`/searchresult?query=${searchQuery}`);
   };
- 
 
   return (
-    <header className={styles.header}>
-      <div>
-        <div className={styles.barraandiconuser}>
-          <div className={styles.barra}>
-            <Link href="/" className={styles.iconapp}>
-              <Image
-                width={250}
-                height={40}
-                src="/images/logologo.png"
-                alt="Image logo"
-              />
-            </Link>
-            <nav className={styles.navegacion}>
-              <Link href="/">Home</Link>
-            </nav>
+    <div className={styles.menuContainer}>
+      <div className={styles.barraandiconuser}>
+        <div className={styles.barra}>
+          <Link href="/" className={styles.iconapp}>
+            <Image
+              width={250}
+              height={40}
+              src="/images/logologo.png"
+              alt="Image logo"
+            />
+          </Link>
+        </div>
+      </div>
+      <header className={styles.container1}>
+        <div className={styles.container2}>
+          <div className={styles.textMenu}>
+            <Link href="../">Inicio</Link>
           </div>
 
           <div className={styles.iniciarsesion}>
-            <div className={styles.divdivbuscador}>
-              <div className={styles.divbuscador}>
-                <form onSubmit={handleSearch}>
-                  <input
-                    className={styles.inputbuscador}
-                    type="number"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Buscar por precio"
-                  />
-                </form>
-              </div>
-            </div>
-
-            <div className={styles.linkiniciarsesion}>
-              <div>
-                <Link href="../veriry">Cuenta</Link>
-              </div>
+            <div className={styles.divbuscador}>
+              <form onSubmit={handleSearch}>
+                <input
+                  className={styles.inputbuscador}
+                  type="number"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Buscar por precio"
+                />
+              </form>
             </div>
           </div>
+
+          <div className={styles.textMenu}>
+            <Link href="../veriry">Cuenta</Link>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
   );
 };
 
 export default Header;
+
+//
+// <header className={styles.header}>
+//   <div>
+//     <div className={styles.barraandiconuser}>
+//       <div className={styles.barra}>
+//         <Link href="/" className={styles.iconapp}>
+//           <Image
+//             width={250}
+//             height={40}
+//             src="/images/logologo.png"
+//             alt="Image logo"
+//           />
+//         </Link>
+//         <nav className={styles.navegacion}>
+//           <Link href="/">Home</Link>
+//         </nav>
+//       </div>
+
+//       <div className={styles.iniciarsesion}>
+//         <div className={styles.divdivbuscador}>
+//           <div className={styles.divbuscador}>
+//             <form onSubmit={handleSearch}>
+//               <input
+//                 className={styles.inputbuscador}
+//                 type="number"
+//                 value={searchQuery}
+//                 onChange={(e) => setSearchQuery(e.target.value)}
+//                 placeholder="Buscar por precio"
+//               />
+//             </form>
+//           </div>
+//         </div>
+
+//         <div className={styles.linkiniciarsesion}>
+//           <div>
+//             <Link href="../veriry">Cuenta</Link>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </header>

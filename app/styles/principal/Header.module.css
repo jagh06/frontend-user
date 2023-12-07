@@ -1,5 +1,27 @@
+.container1 {
+    display: flex;
+    justify-content: flex-end;
+    margin-inline: 20%;
+    margin-block: 2%;
+}
+.menuContainer {
+    display: flex;
+    justify-content: space-between ;
+    align-items: center; /* Esto alinea los elementos verticalmente en el centro */
+}
+.container2 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20%
+}
+.textMenu{
+    font-size: 20px;
+    font-weight: 0;
+
+}
+/* ok */
 .header {
-    /* background-image: linear-gradient(to right, rgb(0 0 0 / .8), rgb(0 0 0 / .5)), url(/images/banner.jpg); */
     background-size: cover;
     background-position: 50%;
     background-color: rgb(12, 12, 12);
@@ -15,15 +37,18 @@
     display: flex;
     align-items: center;
 }
+
 .iniciarsesion {
     display: flex;
     width: 75%;
-    
+
 }
-.linkiniciarsesion{
+
+.linkiniciarsesion {
     float: right;
 }
-.linkiniciarsesion a:hover{
+
+.linkiniciarsesion a:hover {
     color: blue;
 }
 
@@ -35,10 +60,21 @@
     gap: 2rem;
 }
 
+.inputbuscador {
+    width: 2rem;
+    height: 2rem;
+    background-color: #323232;
+    padding: 10px;
+    border: none;
+    color: var(--blanco);
+    border-radius: 5px;
+}
+
 @media (min-width: 769px) {
     .navegacion {
         margin-top: 0;
     }
+
     .barraandiconuser {
         display: flex;
     }
@@ -57,6 +93,7 @@
 .navegacion a:hover {
     color: rgb(73, 132, 241);
 }
+
 .divdivbuscador {
     width: 80%;
     display: flex;
@@ -64,36 +101,45 @@
     justify-content: flex-end;
     margin-left: 1rem;
 }
-.divbuscador input{
+
+.divbuscador input {
     width: 16rem;
     height: 2rem;
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
     appearance: textfield;
 }
+
 .divbuscador input::-webkit-inner-spin-button,
 .divbuscador input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 @media (max-width:769px) {
-    .barra {
-        display: flex;
+    .menuContainer {
+        flex-direction: column;
     }
+
+    .container1 {
+        margin-inline: 5%;
+        margin-block: 1%;
+    }
+
+    .container2 {
+        flex-direction: column;
+        gap: 10%
+    }
+
     .barraandiconuser {
-        display: block;
-    }
-    .iniciarsesion {
         justify-content: center;
-        align-items: center;
     }
-    .inputbuscador {
-        width: 2rem;
+
+    .iniciarsesion {
+        width: 100%;
     }
+
     .divbuscador {
-        width: 11rem;
+        width: 100%;
     }
 }
-
-

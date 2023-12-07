@@ -36,14 +36,12 @@ const Hospedajes = () => {
                 <h3>¿Quiere ser cliente de Turingo Space?</h3>
               </div>
               <div className={styles.divbutton}>
-                <h4>
+                <h4 className={styles.responsiveText}>
                   Somos una empresa dedicada a la promoción de hospedajes.{" "}
                 </h4>
+
                 <button className={styles.bannerbutton}>
-                  <Link
-                    className={styles.linkstyle}
-                    href={`${baseURLClient}`}
-                  >
+                  <Link className={styles.linkstyle} href={`${baseURLClient}`}>
                     Registra tu hospedaje
                   </Link>
                 </button>

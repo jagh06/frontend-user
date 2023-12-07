@@ -1,15 +1,32 @@
+.title{
+    text-align: center;
+    color:#607FFE
+}
+.subtitle{
+    margin-bottom: 16px;
+    margin-top: 2rem;
+    color:rgb(39, 39, 138)
+}
 .divprincipal {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
 }
+/* el color del divform rgb(94, 93, 93, 0.3) */
 .divform {
-    background-color: rgb(94, 93, 93, 0.3);
+    background-color: white;
     width: 40%;
     border-radius: 10px;
     padding: 1rem;
+  
 }
+.linkregistro {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 .divform h2 {
     margin-bottom: 2rem;
 }
@@ -30,20 +47,24 @@
     padding: 1rem 2rem 1rem 2rem;
     border: none;
     border-radius: 5px;
-    background-color: blue;
+    background-color: #228AFF;
+}
+.inputStyle{
+    padding: 10px;
+    border-radius: 7px;
+    background-color: white;
+    border:1px solid #228AFF;
 }
 .divbutton button:hover {
     background-color: rgb(59, 59, 238);
 }
-.linkregistro{
-    display: flex;
-}
+
 .linkregistro p{
     font-size: 15px;
     margin-right: 10px;
 }
 .linkregistro a {
-    color: rgb(106, 106, 235);
+    color: rgb(75, 75, 177);
 }
 .errorlogin p{
     font-size: 15px;
@@ -52,4 +73,21 @@
 .newpassword {
     color: rgb(73, 73, 230);
     font-size: 14px;
+}
+
+/* responsive design */
+@media (max-width: 600px) {
+    .divprincipal {
+        width: 100%;
+        align-items: center;
+       
+    }
+    .divform {
+        background-color: white;
+        width: 90%;
+        border-radius: 10px;
+        padding: 10px;
+      
+    }
+
 }
