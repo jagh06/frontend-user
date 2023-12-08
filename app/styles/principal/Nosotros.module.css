@@ -37,7 +37,7 @@
     grid-template-columns: repeat(2, 1fr);
 }
 .image {
-    margin: 10px;
+    margin-top: 15px;
 }
 .iamgedev {
     border-radius: 10px;

@@ -55,11 +55,6 @@ const Nosotros = () => {
 
               <div className={styles.divaplicacion}>
                 <h3 style={{ color: "black" }}>¿Cómo funciona?</h3>
-                <h4 style={{ color: "black" }}>Explora y filtra</h4>
-                <p style={{ color: "black" }}>
-                  Utiliza nuestras herramientas de búsqueda avanzada para
-                  explorar una variedad de hospedajes.
-                </p>
                 <h4 style={{ color: "black" }}>Reserva con Confianza</h4>
                 <p style={{ color: "black" }}>
                   Después de encontrar tu hospedaje ideal, reserva con confianza
@@ -85,7 +80,6 @@ const Nosotros = () => {
 
               <div className={styles.divempresa}>
                 <h3 className={styles.aboutUs}>Desarrolladores</h3>
-                <p>Nuestro equipo de desarrollo</p>
                 <div className={styles.desarrolladores}>
                   <div className={styles.grid}>
                     <div className={styles.image}>
@@ -125,7 +119,7 @@ const Nosotros = () => {
                         alt="Image Victo"
                       />
                       <p className={styles.names}>
-                        Víctor Manuel Goznález López. Desarrollador FrontEnd
+                        Víctor Manuel González López. Desarrollador FrontEnd
                       </p>
                     </div>
                   </div>
