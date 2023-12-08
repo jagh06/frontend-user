@@ -53,7 +53,7 @@ const Hospedajes = () => {
       <main className="contenedor">
         <div>
           <div className={styles.h1}>
-            <h1>Hospedajes</h1>
+            <h1 className={styles.hospedajes}>Hospedajes</h1>
           </div>
 
           <div>

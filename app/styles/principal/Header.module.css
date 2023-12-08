@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'MiFuenteLatoThin';
+    src: url('/fonts/Lato-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 .container1 {
     display: flex;
     justify-content: flex-end;
@@ -5,7 +11,7 @@
     margin-block: 2%;
 }
 .menuContainer {
-    height: 5rem;
+    height: 4rem;
     background-color: rgb(69, 82, 202);
     display: flex;
     justify-content: space-between ;
@@ -18,6 +24,7 @@
     gap: 20%
 }
 .textMenu{
+    font-family: 'MiFuenteLatoThin';
     margin-left: 2rem;
     font-size: 20px;
     font-weight: 0;
@@ -69,7 +76,13 @@
     border: none;
     color: rgb(44, 44, 44);
     background-color: white;
-    border-radius: 5px;
+    border-radius: 1px;
+}
+.linklink {
+    font-size: 18px;
+}
+.linklink:hover {
+    color: rgb(12, 12, 12);
 }
 
 @media (min-width: 769px) {
@@ -118,9 +131,16 @@
     margin: 0;
 }
 
+@media (min-width:769px) {
+    .divmenu{
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
 @media (max-width:769px) {
     .menuContainer {
-        flex-direction: column;
+      height: 3rem;
     }
 
     .container1 {
@@ -134,7 +154,12 @@
     }
 
     .barraandiconuser {
-        justify-content: center;
+       opacity: 0;
+       pointer-events: none;
+    }
+    .container1 {
+        opacity: 0;
+        pointer-events: none;
     }
 
     .iniciarsesion {
@@ -142,6 +167,85 @@
     }
 
     .divbuscador {
+        height: 10px;
+        border-radius: 2px;
         width: 100%;
     }
+    .divbuscador input {
+        width: 120px;
+        height: 10px;
+        border-radius: 1px;
+    }
+    .linklink a{
+        font-size: 5px;
+    }
+    .barraandiconuser {
+        width: 10px;
+    }
 }
+
+/* navbar */
+/* Navbar.module.css */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:5px ;
+    margin-right: 10rem;
+    color: #070707;
+  }
+  .divmenu{
+    display: flex;
+  }
+  
+  .logo {
+    margin-left: 6px;
+    font-size: 1.5rem;
+  }
+  
+  .menu {
+    position: relative;
+  }
+  
+  .menu button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .dropdownContent {
+    width: 600%;
+    font-size: 11px;
+    font-family: 'MiFuenteLatoThin';
+    margin-top: 10px;
+    border-radius: 1px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fcfbfb;
+    box-shadow: 0 2px 5px rgba(78, 77, 77, 0.2);
+  }
+
+  .dropdownContent input {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid black;
+  }
+  .dropdownContent a {
+    margin: 3px;
+    display: block;
+    width: 97%;
+    text-decoration: none;
+    color: #1a1919;
+  }
+
+  .dropdownContent a:hover {
+    background-color: #cccaca;
+  }
+  
+  .menu.open .dropdownContent {
+    display: block;
+  }
