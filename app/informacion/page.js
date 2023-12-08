@@ -49,7 +49,8 @@ const Informacion = () => {
         `${baseURL}api/reservaciones/delete/${id}`
       );
       if (response.status === 200) {
-        router.push("./informacion");
+        window.location.reload();
+        //router.push("/");
       }
     } catch (error) {
       console.log("ERROR_DELETE_RESERVATION");
