@@ -23,7 +23,10 @@ const LoginInfo = () => {
         JSON.stringify(userExists.data.user._id)
       );
       if (userExists) {
-        localStorage.setItem("loged_user_authentication", JSON.stringify(userExists.data))
+        localStorage.setItem(
+          "loged_user_authentication",
+          JSON.stringify(userExists.data)
+        );
         router.push("../informacion");
       }
     } catch (error) {
@@ -32,10 +35,10 @@ const LoginInfo = () => {
   };
   const authenticateUser = async (email, password) => {
     try {
-      const response = await axios.post(
-        `${baseURL}api/users/login`,
-        { email: email, password: password }
-      );
+      const response = await axios.post(`${baseURL}api/users/login`, {
+        email: email,
+        password: password,
+      });
       return response.data;
     } catch (error) {
       setErrorLogin("Las credenciales no coinciden");
@@ -48,11 +51,12 @@ const LoginInfo = () => {
       <main className="contenedor">
         <div className={styles.divprincipal}>
           <div className={styles.divform}>
-            <h2>Inicia sesion</h2>
+            <h2 className={styles.title}>Inicia sesion</h2>
             <form onSubmit={handleSumbit}>
               <label>
-                <p>Correo electronico</p>
+                <p className={styles.subtitle}>Correo electronico</p>
                 <input
+                  className={styles.inputStyle}
                   type="email"
                   id="email"
                   value={email}
@@ -62,8 +66,9 @@ const LoginInfo = () => {
                 />
               </label>
               <label>
-                <p>Contraseña</p>
+                <p className={styles.subtitle}>Contraseña</p>
                 <input
+                  className={styles.inputStyle}
                   type="password"
                   id="password"
                   value={password}
@@ -72,13 +77,17 @@ const LoginInfo = () => {
                   required
                 />
               </label>
-              <Link className={styles.newpassword} href="../searchemail">¿Olvidaste tu contraseña?</Link>
+              <Link className={styles.newpassword} href="../searchemail">
+                ¿Olvidaste tu contraseña?
+              </Link>
               <div className={styles.linkregistro}>
-                <p>¿No estas registrado? </p>
-                <Link href="../registro"> Registrate</Link>
+              <Link href="../registro" className={styles.linkr}>
+                 ¿No estas registrado? 
+                 <span style={{fontSize:13}}>Registrate</span>
+                </Link>
               </div>
               <div className={styles.errorlogin}>
-                {errorLogin && (<p>{errorLogin}</p>)}
+                {errorLogin && <p>{errorLogin}</p>}
               </div>
 
               <div className={styles.divbutton}>

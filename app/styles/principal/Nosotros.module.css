@@ -7,7 +7,6 @@
 .divnosotros {
     width: 50%;
     /* text-align: justify; */
-    background-color: rgba(45, 46, 45, 0.8);
 }
 /* tu color: rgb(45, 46, 45, 0.8) */
 .aplicacion{
@@ -17,9 +16,9 @@
     margin-bottom: 2rem;
 }
 .empresa {
+    color: black;
     padding: 1rem;
     border-radius: 7px;
-    background-color: rgba(45, 46, 45, 0.8);
 }
 .divaplicacion {
     margin-bottom: 2rem;
@@ -43,12 +42,37 @@
 .iamgedev {
     border-radius: 10px;
 } 
-
+@media (max-width: 700px) {
+    .divnosotros {
+        width: 90%;
+        text-align: justify;
+       
+    }
+    .aplicacion{
+        padding: 1rem;
+        border-radius: 7px;
+        background-color: white;
+        margin-bottom: 2rem;
+    }
+    .divempresa {
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+    }
+    .desarrolladores {
+        grid-template-columns: 2fr;
+    }
+    .aboutUs {
+        margin-bottom: 2rem;
+    }
+    .names{
+        margin-top: 5%;
+    }
+}
 @media (max-width: 600px) {
     .divnosotros {
         width: 90%;
         text-align: justify;
-        background-color: rgba(45, 46, 45, 0.8);
+       
     }
     .aplicacion{
         padding: 1rem;

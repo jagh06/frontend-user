@@ -20,9 +20,7 @@ const Informacion = () => {
 
     try {
       const fetchDataUser = async () => {
-        const response = await axios.get(
-          `${baseURL}api/users/${idu}`
-        );
+        const response = await axios.get(`${baseURL}api/users/${idu}`);
         setName(response.data.data.name);
         setEmail(response.data.data.email);
       };

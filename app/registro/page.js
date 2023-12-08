@@ -58,7 +58,7 @@ const Registro = () => {
           <div className={styles.divform}>
             <h2>Registrate</h2>
             <form onSubmit={handleFormSubmit}>
-              <label>
+              <label className={styles.label}>
                 <p>Nombre</p>
                 <input
                   type="text"
@@ -69,7 +69,7 @@ const Registro = () => {
                   required
                 />
               </label>
-              <label>
+              <label  className={styles.label}>
                 <p>Correo electronico</p>
                 <input
                   type="email"
@@ -83,7 +83,7 @@ const Registro = () => {
                   <div className={styles.userexists}>{userexists}</div>
                 )}
               </label>
-              <label>
+              <label  className={styles.label}>
                 <p>Contraseña</p>
                 <input
                   type="password"

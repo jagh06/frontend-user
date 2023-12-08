@@ -5,7 +5,7 @@
 .subtitle{
     margin-bottom: 16px;
     margin-top: 2rem;
-    color:rgb(39, 39, 138)
+    color:rgb(52, 52, 53)
 }
 .divprincipal {
     display: flex;
@@ -15,6 +15,7 @@
 }
 /* el color del divform rgb(94, 93, 93, 0.3) */
 .divform {
+    border: 1px solid rgb(128, 126, 126);
     background-color: white;
     width: 40%;
     border-radius: 10px;
@@ -49,9 +50,18 @@
     border-radius: 5px;
     background-color: #228AFF;
 }
+.linkr {
+    margin-top: 10px;
+    color: black;
+}
+.linkr  span {
+    margin-left: 5px;
+    color: rgb(73, 73, 230);
+}
 .inputStyle{
     padding: 10px;
-    border-radius: 7px;
+    border-radius: 5px;
+    color: black;
     background-color: white;
     border:1px solid #228AFF;
 }
@@ -64,7 +74,7 @@
     margin-right: 10px;
 }
 .linkregistro a {
-    color: rgb(75, 75, 177);
+    color: rgb(93, 93, 95);
 }
 .errorlogin p{
     font-size: 15px;

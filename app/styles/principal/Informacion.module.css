@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'MiFuenteNanum';
+    src: url('/fonts/NanumGothic-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 .inforuser{
     margin-top: 2rem;
     display: flex;
@@ -6,13 +12,17 @@
     margin-bottom: 2rem;
 }
 .divinfouser {
-    background-color: rgba(231, 231, 235, 0.3);
-    color: rgb(241, 239, 239);
+    border: 1px solid rgb(90, 90, 90);
+    background-color: rgba(240, 240, 243, 0.3);
+    color: rgb(20, 20, 20);
     width: 50%;
-    border-radius: 2px;
+    border-radius: 5px;
     padding: 1rem;
 }
 
+.divinfouser h3 {
+    margin-bottom: 5px;
+}
 
 .divinfo {
     display: flex;
@@ -23,17 +33,23 @@
 .lista {
     width: 50%;
 }
+.lista h3{
+    color: rgb(20, 20, 20);
+}
 .divinforeservation {
-    border-radius: 7px;
-    background-color: rgb(61, 66, 66, 0.6);
+    border: 1px solid rgb(114, 113, 113);
+    border-radius: 5px;
+    background-color: rgba(240, 245, 245, 0.6);
     padding: 1rem;
+    color: black;
     margin-bottom: 2rem;
 }
 .divinfouser span {
-    color: rgb(215, 215, 219);
+    color: rgb(27, 27, 27);
 }
 .divinforeservation span {
-    color:  rgb(139, 139, 233);
+
+    color:  rgb(30, 30, 31);
 }
 .divinforeservation {
     display: flex;
@@ -55,7 +71,7 @@
     width: 60%;
     border-radius: 5px;
     border: none;
-    background-color: rgb(34, 34, 238);
+    background-color: #228AFF;
 }
 .button:hover {
     color: rgb(241, 245, 247);
@@ -63,29 +79,47 @@
     background-color: rgb(71, 71, 230);
 }
 .buttonlogout {
+    margin-top: 10px;
     padding-left: 4rem;
     padding-right: 4rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    border-radius: 5px;
     border: none;
-    background-color: rgb(48, 48, 230);
+    background-color: #228AFF;
 }
 
 .buttonlogout:hover {
-    background-color: rgb(89, 89, 216);
+    background-color: rgb(59, 59, 238);
     cursor: pointer;
 }
 
-@media (max-width:769px) {
-   .divinforeservation {
-    display: block;
-   }
-   .divbutton {
-    margin-top: 1rem;
-    width: 100%;
-   }
-   .divinformacion {
-    font-size: 11px;
 
+@media (max-width: 600px) {
+    .divinfouser {
+        width: 100%;
+    }
+    .lista {
+        font-size: 12px;
+        width: 100%;
+    }
+    .divinforeservation {
+        display: block;
+    }
+    .button {
+        width: 100%;
+    }
+    .divbutton{
+        color: white;
+        margin-top: 1rem;
+        width: 100%;
+    }
 }
+@media (max-width: 720px) {
+    .divinfouser {
+        width: 100%;
+    }
+    .lista {
+        width: 100%;
+    }
 }

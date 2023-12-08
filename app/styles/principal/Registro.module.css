@@ -5,18 +5,29 @@
     margin-top: 2rem;
 }
 .divform {
-    background-color: rgb(94, 93, 93, 0.3);
-    width: 40%;
+    border: 1px solid rgb(128, 126, 126);
+    background-color: white;
+    width: 30%;
     border-radius: 10px;
     padding: 1rem;
 }
 .divform h2 {
+    color:#607FFE;
     margin-bottom: 2rem;
 }
 .divform p {
+    color: black;
     font-size: 1.2rem;
 }
+.label {padding: 2rem;
+    margin-bottom: 2rem;
+}
 .divform input {
+    border:1px solid #228AFF;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    padding: 0.4rem;
     width: 100%;
     height: 2rem;
 }
@@ -30,11 +41,22 @@
     padding: 1rem 2rem 1rem 2rem;
     border: none;
     border-radius: 5px;
-    background-color: blue;
+    background-color: #228AFF;
 }
 .divbutton button:hover {
     background-color: rgb(59, 59, 238);
 }
 .userexists {
     color: red;
+}
+
+@media (max-width: 600px) {
+    .divform {
+        width: 100%;
+    }
+}
+@media (max-width: 720px) {
+    .divform {
+        width: 100%;
+    }
 }

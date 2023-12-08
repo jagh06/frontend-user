@@ -34,9 +34,10 @@ const SearchEmail = () => {
       <main className="contenedor">
         <div className={styles.divpricipal}>
           <div className={styles.divform}>
-            <h2>Busca tu cuenta</h2>
+            <h2 className={styles.busca}>Busca tu cuenta</h2>
             <form onSubmit={handleData}>
               <input
+                className={styles.inputemail}
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}

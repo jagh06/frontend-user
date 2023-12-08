@@ -118,12 +118,12 @@ const Reservar = () => {
       <main className="contenedor">
         <div className={styles.divprincipal}>
           <div className={styles.form}>
-            <p>Reservar a {namehotel}</p>
+            <p className={styles.preserva}>Reservar a {namehotel}</p>
             <form onSubmit={handleFormSubmit}>
               <div className={styles.divinfo}>
-                <h3>Informacion de contacto</h3>
-                <label>
-                  <p>Nombre completo</p>
+                <h3 className={styles.h3}>Informacion de contacto</h3>
+                <label className={styles.label}>
+                  <p className={styles.pinfo}>Nombre completo</p>
                   <input
                     type="text"
                     value={nombre}
@@ -132,8 +132,8 @@ const Reservar = () => {
                     required
                   />
                 </label>
-                <label>
-                  <p>Agrega tu correo</p>
+                <label className={styles.label}>
+                  <p className={styles.pinfo}>Agrega tu correo</p>
                   <input
                     type="email"
                     value={correo}
@@ -142,8 +142,8 @@ const Reservar = () => {
                     required
                   />
                 </label>
-                <label>
-                  <p>Agrega un telefono</p>
+                <label className={styles.label}>
+                  <p className={styles.pinfo}>Agrega un telefono</p>
                   <input
                     type="number"
                     value={phone}
@@ -154,10 +154,10 @@ const Reservar = () => {
                 </label>
               </div>
               <div className={styles.divnpersonas}>
-                <h3>Número de personas</h3>
-                <label>
-                  <p>¿Con cuantas personas viaja contigo?</p>
+                <p>Número de personas</p>
+                <label className={styles.label}>
                   <input
+                  className={styles.inputnum}
                     type="number"
                     value={personas}
                     onChange={(e) => setPersonas(e.target.value)}
@@ -167,9 +167,8 @@ const Reservar = () => {
                 </label>
               </div>
               <div className={styles.divnumeronoches}>
-                <h3>Número de noches</h3>
-                <label>
-                  <p>Numero de noches</p>
+                <p>Número de noches</p>
+                <label className={styles.label}>
                   <input
                     type="number"
                     value={nonoches}
@@ -180,9 +179,8 @@ const Reservar = () => {
                 </label>
               </div>
               <div className={styles.divfecha}>
-                <h3>Fecha de llegada</h3>
-                <label>
-                  <p>Fecha de llegada</p>
+                <p>Fecha de llegada</p>
+                <label className={styles.label}>
                   <input
                     type="date"
                     value={fecha}

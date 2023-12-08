@@ -28,14 +28,13 @@ const Header = () => {
               alt="Image logo"
             />
           </Link>
+          <div className={styles.textMenu}>
+            <Link href="../">Inicio</Link>
+          </div>
         </div>
       </div>
       <header className={styles.container1}>
         <div className={styles.container2}>
-          <div className={styles.textMenu}>
-            <Link href="../">Inicio</Link>
-          </div>
-
           <div className={styles.iniciarsesion}>
             <div className={styles.divbuscador}>
               <form onSubmit={handleSearch}>

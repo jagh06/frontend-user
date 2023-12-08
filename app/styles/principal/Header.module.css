@@ -5,6 +5,8 @@
     margin-block: 2%;
 }
 .menuContainer {
+    height: 5rem;
+    background-color: rgb(69, 82, 202);
     display: flex;
     justify-content: space-between ;
     align-items: center; /* Esto alinea los elementos verticalmente en el centro */
@@ -16,6 +18,7 @@
     gap: 20%
 }
 .textMenu{
+    margin-left: 2rem;
     font-size: 20px;
     font-weight: 0;
 
@@ -24,7 +27,6 @@
 .header {
     background-size: cover;
     background-position: 50%;
-    background-color: rgb(12, 12, 12);
     padding: 1rem;
 }
 
@@ -63,10 +65,10 @@
 .inputbuscador {
     width: 2rem;
     height: 2rem;
-    background-color: #323232;
     padding: 10px;
     border: none;
-    color: var(--blanco);
+    color: rgb(44, 44, 44);
+    background-color: white;
     border-radius: 5px;
 }
 

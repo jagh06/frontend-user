@@ -91,9 +91,9 @@ const Login = () => {
               </Link>
               <br /> <br />
               <div className={styles.linkregistro}>
-                <Link href="../registro">
-                  <span style={{fontSize:13}}>¿No estas registrado? </span> <br />
-                  Registrate
+                <Link href="../registro" className={styles.linkr}>
+                 ¿No estas registrado? 
+                 <span style={{fontSize:13}}>Registrate</span>
                 </Link>
               </div>
               <div className={styles.errorlogin}>
