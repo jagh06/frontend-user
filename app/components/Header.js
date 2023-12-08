@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/principal/Header.module.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { MdOutlineMenu } from "react-icons/md";
 
@@ -17,6 +17,24 @@ const Header = () => {
     router.push(`/searchresult?query=${searchQuery}`);
   };
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+
+    // Agregar el evento de clic global para cerrar el menú cuando se hace clic fuera de él
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      // Limpiar el evento al desmontar el componente
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
@@ -45,7 +63,10 @@ const Header = () => {
 
       <div className={styles.divmenu}>
         <div className={styles.navbar}>
-          <div className={`${styles.menu} ${isDropdownOpen && styles.open}`}>
+          <div
+            ref={dropdownRef}
+            className={`${styles.menu} ${isDropdownOpen && styles.open}`}
+          >
             <button onClick={toggleDropdown}>
               <MdOutlineMenu size={20} />
             </button>
