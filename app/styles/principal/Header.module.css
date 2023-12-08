@@ -172,10 +172,10 @@
         width: 100%;
     }
     .divbuscador input {
-        width: 120px;
-        height: 15px;
+        width: 150px;
+        height: 25px;
         border: none;
-        border-radius: 1px;
+        border-radius: 3px;
     }
     .linklink a{
         font-size: 5px;
